@@ -1,0 +1,11 @@
+name: Raining_TNT
+version: '${project.version}'
+main: com.tizfaver.raining_tnt.Raining_TNT
+api-version: 1.19
+description: What's better than a beatifull day with rain? maybe with TNT?
+commands:
+  RT:
+    description: Start or stop the rain of tnt.
+    usage: /RT <start/stop/timeset>
+    permission: op
+    permission-message: &4 You don't have the permission to enable or disable the plugin.
