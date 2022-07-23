@@ -1,0 +1,12 @@
+name: WatchedBlockBecomesAir
+version: '1.0'
+main: com.tizfaver.watchedblockbecomesair.WatchedBlockBecomesAir
+api-version: 1.19
+authors: [ Tizfaver ]
+description: Why not replace every block watched with air? it could be fun they said...
+commands:
+  ra:
+    description: Start or stop the replacing with air.
+    usage: /ra <start/stop>
+    permission: op
+    permission-message: You don't have the permission to enable or disable the plugin.
