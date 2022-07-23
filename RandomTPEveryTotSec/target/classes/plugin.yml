@@ -1,0 +1,12 @@
+name: RandomTeleportEveryTotSecond
+version: '1.0'
+main: com.tizfaver.randomteleporteverytotsecond.RandomTeleportEveryTotSecond
+api-version: 1.19
+authors: [ Tizfaver ]
+description: Just why not? why not be teleported randomly every tot seconds? how bad could this be?
+commands:
+  RTP:
+    description: Start or stop the random TP.
+    usage: /rtp <start/stop>
+    permission: op
+    permission-message: You don't have the permission to enable or disable the plugin.
