@@ -1,0 +1,12 @@
+name: DamageTPYou
+version: '${project.version}'
+main: com.tizfaver.damagetpyou.DamageTPYou
+api-version: 1.19
+authors: [ Tizfaver ]
+description: Maybe this could be usefull? I think no.
+commands:
+  dtp:
+    description: Start or stop the Random TP when Damage.
+    usage: /dtp <start/stop>
+    permission: op
+    permission-message: You don't have the permission to enable or disable the plugin.
