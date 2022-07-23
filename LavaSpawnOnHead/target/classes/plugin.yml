@@ -1,0 +1,12 @@
+name: HotHead
+version: '1.0'
+main: com.tizfaver.hothead.HotHead
+api-version: 1.19
+authors: [ Tizfaver ]
+description: Making a lava spawner on your head could be a really good idea, right?
+commands:
+  sl:
+    description: Start or stop the spawning lava.
+    usage: /sl <start/stop>
+    permission: op
+    permission-message: You don't have the permission to enable or disable the plugin.
