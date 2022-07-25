@@ -1,0 +1,12 @@
+name: WhatYourBecomesRandom
+version: '${project.version}'
+main: com.tizfaver.whatyouwatchbecomesrandom.WhatYouWatchBecomesRandom
+api-version: 1.19
+authors: [ Tizfaver ]
+description: I was bored, so i created this 'funny' plugin
+commands:
+  rblock:
+    description: Start or stop the replacing with random block.
+    usage: /rblock <start/stop>
+    permission: op
+    permission-message: You don't have the permission to enable or disable the plugin.
