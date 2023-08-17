@@ -1,0 +1,3 @@
+#Config file where will be saved all the items that the lucky blocks will drop. You can modify from here the text colors etc...
+#plese use "/lucky help" to understand how to add a new item.
+customItems: []

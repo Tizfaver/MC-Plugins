@@ -1,0 +1,166 @@
+#Set the return Lobby, where the players will be tipped after the match is end.
+return-lobby: "prelobby"
+
+#Set the game type, available type: SOLO, DUO, TRIO.
+gameType: "SOLO"
+
+#Set the name of the World.
+map-name: "Cubes"
+
+#Set this bungee-cord server name.
+this-bungeecord-name: "server_cubes"
+
+#Current DB format (for now must use these names): id_map, map_name, current_players, max_players, game_status, game_type, bungee_name
+sqlite:
+  enabled: false
+  chosen-id: 1
+  db-path: "jdbc:sqlite:/home/ubuntu/bungeecord/lucky.db" #It's only and example.
+  table-name: "lucky_blocks"
+
+#Set the location where all player will be tipped joining the waiting lobby.
+lobby-spawn:
+  world: "world"
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  pitch: -180.0
+  yaw: 0.0
+
+#Set the start and end block. It will destroy every block in between these two blocks.
+remover:
+  enabled: true
+  start-block:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  end-block:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+
+#Set the margins of the Map. Player will not able to go further.
+map-margin:
+  enabled: false
+  start-block:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  end-block:
+    x: 0.0
+    z: 0.0
+
+other:
+  #Clear the inventory of the player when joining the lobby.
+  clear-inv-onjoin: true
+
+  #Give to the player a tool that will allow him to go in a server, for example, the same of 'return-lobby'.
+  give-back-tool:
+    enabled: true
+    destination: "prelobby"
+    index: 8 #Hotbar slot.
+
+  #Give to the player an item that will allow the player to choose the Team.
+  give-team-selector:
+    enabled: true
+    index: 0 #Hotbar slot.
+
+  #This will allow the other player see what team a player selected (only in the waiting lobby). Could be useful if you don't want the players know immediately what team have chosen other players.
+  show-selected-team: true
+
+  #Set the Nexus type block. Only this block will count as Nexus.
+  nexus-block: DIAMOND_BLOCK
+
+  #Set the Spawn type block. If this block is destroyed, it will be immediately replaced.
+  spawn-block: BEDROCK
+
+  #Set a fixed Tick of the day.
+  fixed-day:
+    enabled: true
+    specific-tick: 1000
+
+#Set the minimum Y block. If the player goes under this Y, it will be killed.
+min-y: -35
+
+#Set the minimum player to start the game.
+min-players: 2
+
+#Set the maximum player. The other player will be SPECTATORS.
+max-players: 4
+
+#Set the time to start the game when the minimum player are waiting.
+time-to-start: 30
+
+#Set the max time for the game, in seconds. 1800 seconds = 30 minutes.
+max-time: 1800
+
+#Set the time before all the players gets automatically teleported to the 'return-lobby'
+time-after-end: 10
+
+#Enable or disable the Tab list. IT'S COMPATIBLE WITH PLACEHOLDERS.
+tab-list:
+  enabled: true
+  header:
+    - "tab list header!"
+    - "You can use multiple lines"
+  footer:
+    - "tab list footer!"
+    - "some placeholder: %some_place_holder%"
+
+#Set the player name in base of his team color.
+name-player-team-color:
+  enabled: true
+  also-add-team-first-char: true #For example, if team is named "Red" the player will have "R Prov_s".
+
+#Set your custom IP that will be showed at the end of the sidebar (if you want you can put whatever to want...). IT'S COMPATIBLE WITH PLACEHOLDERS.
+your-custom-server-ip: "mc.lucky.org"
+
+#Set a custom title for the Title of the sidebar. IT'S COMPATIBLE WITH PLACEHOLDERS.
+custom-sidebar-title: "§e§lCUBE §6§lLUCKY §e§lBLOCK"
+
+#Enable or disable the default sidebar. IT'S COMPATIBLE WITH PLACEHOLDERS. TODO: make a full customizable sidebar.
+sidebar: true
+
+#Here will be saved all the Team you will create. But you can modify here some parameter.
+#teamColor can be: DARK_BLUE, DARK_GREEN, DARK_AQUA, DARK_RED, DARK_PURPLE, GOLD, GRAY, DARK_GRAY, BLUE, GREEN, AQUA, RED, LIGHT_PURPLE, YELLOW, WHITE.
+#Here are simply two default Teams:
+teams:
+  team1:
+    teamName: "Blue"
+    teamColor: "BLUE"
+    spawnLocation:
+      world: "world"
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      pitch: -180.0
+      yaw: 0.0
+    nexusLocation:
+      world: "world"
+      x: 0.0
+      y: 0.0
+      z: 0.0
+  team2:
+    teamName: "Red"
+    teamColor: "RED"
+    spawnLocation:
+      world: "world"
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      pitch: -180.0
+      yaw: 0.0
+    nexusLocation:
+      world: "world"
+      x: 0.0
+      y: 0.0
+      z: 0.0
+
+#Here will be saved all your custom death events messages. For developers: when a player die, will be called the Death event anyway.
+death-messages: #You can use colors with §
+  enabled: true
+  normal-messages:
+    - "[victim] §ffall into the void."
+    - "[victim] §edidn't make it."
+    - "[victim] was killed by [killer]."
+  final-kills:
+    - "[victim] was shut down by [killer]. Silent, please! §b§lFINAL KILL!"

@@ -1,0 +1,10 @@
+name: Lucky
+version: '${project.version}'
+main: com.tizfaver.lucky.Main
+authors: [ Tizfaver ]
+description: Testing for Lucky block
+commands:
+  lucky:
+    description: Change the settings of the plugin. Use /lucky help for more info.
+    usage: /lucky
+    permission: luckyblock.modify

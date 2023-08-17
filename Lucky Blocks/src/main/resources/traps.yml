@@ -1,0 +1,27 @@
+#Config file where you can choose which trap to enable, and which to disable.
+#Here you will also able to set custom commands that will be executed (from the player or the console).
+#In every trap/effect you will have to set a number, that will be the probability to spawn/do the trap or effect. Set to 0 to disable the trap/effect.
+#Remember, these are only my traps, that I made, but if you want, you can add more traps, with the custom command, but you probably will need to create a custom Plugin for this.
+spawn-anvil: 1
+spawn-crafting-table: 1
+spawn-enchanting-table: 1
+spawn-chests: 1 #this will just spawn 3 chest (already set with loot), it's made for a basic trap. Remember you can develop your plugin and use custom command executor here below.
+hole-trap: 1
+fly-effect:
+  probability: 1
+  seconds: 5
+head-tnt-trap: 1
+lighting-trap: 1
+nausea-effect: 1
+one-heart-challenge: 1
+lucky-unlucky-potions: 1
+rocket-trap: 1
+spawn-mobs: 2
+tp-to-near-player: 1
+obsidian-anvil-traps: 1 #spawn a water obsidian trap, OR an anvil trap.
+
+custom-command-executor:
+  enabled: true
+  commands: #set to 0 the probability to disable the specific custom command. (not recommended, instead would be better to eliminate the line).
+    - "[prob 1] [player]: gamemode survival"
+    - "[prob 1] [console]: it's the console!"
